@@ -55,6 +55,7 @@ angular.module('ngCordova.plugins.appAvailability', [])
     }
   }
 }]);
+
 // install   :     cordova plugin add https://github.com/christocracy/cordova-plugin-background-geolocation.git
 // link      :     https://github.com/christocracy/cordova-plugin-background-geolocation
 
@@ -1132,7 +1133,7 @@ angular.module('ngCordova.plugins.file', [])
         return q.promise;
       },
 
-      readFileAbsolute: function () {
+      readFileAbsolute: function (filePath) {
         var q = $q.defer();
         window.resolveLocalFileSystemURI(filePath,
           function (fileEntry) {
